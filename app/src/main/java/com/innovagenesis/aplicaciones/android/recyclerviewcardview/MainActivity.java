@@ -17,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
         /** Se instancia el linear layout, se le agrega la propiedad para que todos
          * sean iguales y se inicializa*/
 
+        RecycleViewAdapter adapter = new RecycleViewAdapter(this);
+
         recyclerView = (RecyclerView)findViewById(R.id.recycleView);
+        recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
